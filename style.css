@@ -11,16 +11,20 @@ p{
     font-family: 'Josefin Slab', serif;
     margin: 0px;
 }
-a, a:hover, a:visited{
-    text-decoration: none;
-    color: black;
+ul{
+    font-family: 'Josefin Slab', serif;
+    margin: 0px;
 }
+
 hr{
+    
     background-color: black;
     border: 0px;
     height: 1.5px;
     width: 100px;
-    margin: 10px auto;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
     
 }
 #header{
@@ -37,14 +41,17 @@ hr{
 .logo{
     
     font-size: 25px;
-    padding-left: 20px;
-    
+    padding-left: 20px; 
+}
+.logo a, a:hover, a:visited{
+    text-decoration: none;
+    color: black;
 }
 .loginBox{
     padding-right: 20px;   
 }
 
-.UM, .PW{
+.UN, .PW{
     font-family: 'Josefin Slab', serif;
     padding: 0px;
     height: 28px;
@@ -52,9 +59,7 @@ hr{
     width: 120px;
     padding-left: 5px;
     padding-right: 5px;
-    vertical-align:middle;
-    
-    
+    vertical-align:middle;  
 }
 .loginButton{
     border: none;
@@ -66,27 +71,16 @@ hr{
     color: white;
     vertical-align:middle;
 }
-.welcome{
-    
-}
-.box{
-    height: 100%;
+.logoutButton{
+    border: none;
+    height: 30px;
+    width: 100px;
+    font-family: 'Josefin Slab', serif;
+    font-size: 20px;
     background-color: rgb(97, 122, 53);
-    width: 400px;
-    margin:0 auto;
-    text-align: center;
-    font-size: 50px;
-    padding-bottom: 10px;
-    
-    
+    color: white;
+    vertical-align:middle;
 }
-#main{
-    /*background-color: red;*/
-}
-
-
-
-
 
 #content{
     /*background-color: blue;*/
@@ -94,4 +88,26 @@ hr{
     height:80vh;
     margin-top: 60px;
     padding-top: 150px;
+}
+#main{
+    /*background-color: red;*/
+}
+
+.welcome{
+    
+}
+.box{
+    height: 100%;
+    background-color: rgb(97, 122, 53);
+    width: 50vw;
+    min-width: 500px;
+    margin:0 auto;
+    text-align: center;
+    font-size: 50px;
+    padding-bottom: 10px;
+  
+}
+.box a, a:hover, a:visited{
+    font-family: 'Amatic SC', cursive;
+    color: black;
 }
