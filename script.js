@@ -52,7 +52,7 @@ $(document).ready(function(){
             $(".loggedIn").fadeIn(1000);
             $(".nameMessage").text(sessionStorage.userName + "'s ToDo:");
             $(".toDoList").text(loopArray);
-            
+//Sparar användaren i sessionStorage
             sessionStorage.setItem("userId", sessionStorage.userName);
         }
 //Om inte, visa "glömt lösen"-sida.

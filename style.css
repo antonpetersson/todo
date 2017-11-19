@@ -1,6 +1,7 @@
 body{
     margin: 0px;
     padding: 0px;
+    overflow-x: hidden;
     
 }
 h1{
@@ -38,14 +39,34 @@ hr{
     justify-content: space-between;
     align-items: center;
 }
+.leftHead{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.leftHead a, .leftHead a:hover, .leftHead a:visited{
+    text-decoration: none;
+    color: black;
+}
 .logo{
-    
     font-size: 25px;
     padding-left: 20px; 
 }
-.logo a, a:hover, a:visited{
+
+.links{
+    margin-left: 2vw;
+    margin-bottom: 10px;
+    font-family: 'Josefin Slab', serif;
+    font-size: 20px;
+}
+.links a, .links a:hover, .links a:visited{
     text-decoration: none;
+    font-family: 'Josefin Slab', serif;
     color: black;
+}
+.links a:hover{
+    text-decoration: underline;
 }
 .loginBox{
     padding-right: 20px;   
@@ -107,7 +128,19 @@ hr{
     padding-bottom: 10px;
   
 }
-.box a, a:hover, a:visited{
+.incorrect a, .box a:hover, .box a:visited{
     font-family: 'Amatic SC', cursive;
     color: black;
+}
+.contact a, .contact a:hover, .contact a:visited{
+    text-decoration: none;
+    font-family: 'Josefin Slab', serif;
+    color: black;
+}
+.contact a:hover{
+    text-decoration: underline;
+}
+#footer{
+    height: 150px;
+    background-color: lightslategray;
 }
