@@ -49,7 +49,6 @@ function showLoggedInPage(){
     var json_str = JSON.stringify(stuffToDo);
     localStorage.doList = json_str; 
 
-    var loopArray = JSON.parse(localStorage.doList);
 
     $(".welcome").hide();
     $(".incorrect").hide();
@@ -75,6 +74,19 @@ function ShowStartPage(){
     $(".incorrect").hide();
     $(".logoutButton").hide();
     $(".welcome").fadeIn(1000);
+}
+//testing testing
+function createTodo(){
+
+    var loopArray = JSON.parse(localStorage.doList);
+
+    todoList = "<ul>";
+    for(var i = 0; i < loopArray.length; i++){
+    todoList += "<li>" + loopArray[i] + "<li>";
+
+
+    }
+
 }
 
 });
