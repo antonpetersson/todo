@@ -59,6 +59,7 @@ function showLoggedInPage(){
     $(".loggedIn").fadeIn(1000);
     $(".nameMessage").text(userName + "'s ToDo:");
     $(".toDoList").text(loopArray);   
+    createTodo();
     
 }
 function ShowForgotPwPage(){
@@ -82,7 +83,9 @@ function createTodo(){
 
     todoList = "<ul>";
     for(var i = 0; i < loopArray.length; i++){
-    todoList += "<li>" + loopArray[i] + "<li>";
+    todoList += "<li>" + loopArray[i] + "</li>";
+    todoList = todoList + "</ul>"
+    console.log(todoList);
 
 
     }
