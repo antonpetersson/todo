@@ -2,7 +2,7 @@ $(document).ready(function(){
 //login info
     var userName = "test";
     var passWord = "password";
-
+    
     
 //Kolla om man redan är inloggad och isåfall visa inloggad sida.
     if (sessionStorage.getItem("userId"))  {
@@ -36,9 +36,9 @@ $(document).ready(function(){
     });
     
 
-
-
-function showLoggedInPage(){
+// FUNKTIONER
+// Inloggnignssidan
+function showLoggedInPage(loopArray){
     
     var stuffToDo = [
         "Klipp gräset", 
@@ -49,7 +49,6 @@ function showLoggedInPage(){
     var json_str = JSON.stringify(stuffToDo);
     localStorage.doList = json_str; 
 
-
     $(".welcome").hide();
     $(".incorrect").hide();
     $(".UN").hide();
@@ -58,17 +57,18 @@ function showLoggedInPage(){
     $(".logoutButton").show();
     $(".loggedIn").fadeIn(1000);
     $(".nameMessage").text(userName + "'s ToDo:");
-    $(".toDoList").text(loopArray);   
-    createTodo();
-    
+    createTodo();   
 }
+
+//Fel lösen sidan
 function ShowForgotPwPage(){
 $(".loggedIn").hide();
 $(".welcome").hide();
 $(".logoutButton").hide();
 $(".incorrect").fadeIn(1000);
-
 }
+
+//startsidan
 function ShowStartPage(){
     $(".welcome").hide();
     $(".loggedIn").hide();
@@ -76,20 +76,32 @@ function ShowStartPage(){
     $(".logoutButton").hide();
     $(".welcome").fadeIn(1000);
 }
-//testing testing
+
+//Gör listan till en ul
 function createTodo(){
 
     var loopArray = JSON.parse(localStorage.doList);
 
     todoList = "<ul>";
     for(var i = 0; i < loopArray.length; i++){
-    todoList += "<li>" + loopArray[i] + "</li>";
-    todoList = todoList + "</ul>"
-    console.log(todoList);
-
-
+    todoList += "<li><a href='#' onClick='delTodoItem(" + i + ")'>" + loopArray[i] + "</a></li>";
     }
+    todoList += "</ul>"
+    
+    $(".toDoList").html(todoList);
+}
+// testing testing, ta bort från listan
+function delTodoItem(i){
+    var todoArray = JSON.parse(localStorage.doList);
+
+    todoArray.splice(i,1);
+    createTodo();
+
+
 
 }
+
+
+
 
 });
